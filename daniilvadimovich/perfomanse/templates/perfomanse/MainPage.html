@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <title>{{Title}}</title>
+
+    <link href="{% static 'perfomanse/css/main.css/' %}" rel="stylesheet"/>
+</head>
+
+<body style="background: #F7F7F7">
+<div id="container">
+    <img src="{% static 'perfomanse/images/mainLogo.png/' %}"/>
+
+    <div name="images">
+        <p style="background: #DF3062; padding:5px;"><a href="" style="text-decoration: none;color: black; "> Идеи -></a></p>
+        <p><a href="" style="text-decoration: none;color: black;"> Новинки -></a></p>
+        <p style="background: #11ABC1; padding: 0px 30px 10px 20px; margin-left: -20px; margin-right: 20px;
+        text-align: center"><a href="" style="text-decoration: none; color: black;"> Брэнды -></a></p>
+        <p><a href="" style="text-decoration: none; color: black; background: #4BAC3F; padding: 10px;"> Аксессуары -></a></p>
+    </div>
+
+    <div name="images2">
+        <p><a href="" style="text-decoration: none;color: black;"> Обувь -></a></p>
+        <p><a href="" style="text-decoration: none;color: black; background: #F5B935; padding: 10px 10px 5px 30px; margin-left: -20px;" > Одежда -> </a></p>
+    </div>
+
+    <div name="Authorisation">
+        <p>
+            <span>
+                <a href="" style="text-decoration: none;color: black;"> Вход </a>
+            </span>
+            <span style="margin-left: 20px; margin-right: 20px;"> / </span>
+            <span>
+                <a href="" style="text-decoration: none;color: black;"> Регистрация  </a>
+            </span>
+        </p>
+    </div>
+</div>
+<div style="background: #DF3062; margin: 0px 0px 0px 300px; margin-top: 80px; margin-bottom: 80px;">
+    <div name="ContainLogoName">
+        <p name="LogoNameAbove" style="color: #9a183d;"> Твой рабочий стиль </p>
+        <p name="LogoName">Professional</p>
+        <p name="LogoNameUnder" style="color: #FEFEFE;"> Urban</p>
+        <p name="LogoNameUnder" style="background:#F5B935;"> Wardrobe </p>
+    </div>
+</div>
+
+    <div id="container2">
+        <img src="{% static 'perfomanse/images/chel.jpg/' %}"/>
+
+        <div name="history" style=" padding: -20px;">
+            <p style="width: 250px;">
+            <span name="historyBold"> Олег Рой </span>
+            <span name="marginHistory"> - </span>Российский писатель и сценарист,
+                                             член Союза писателей России и Союза писателей Европы,
+                                             обладатель Золотого рыцарского креста доблести и чести.
+        </p></div>
+
+        <div name="description">
+            <div>
+                <div name="underLine" style="margin-top: 40px; margin-right: 100px; width: 1200px" ></div>
+
+                <p name="quotation">
+                Олег Рой говорит про стиль: Что может нас изменить? Другая одежда, особенно принципиально новый её стиль
+                или фасон. Новая причёска.
+                Женщину — макияж. Вообще любые перемены в имидже, все заметные аксессуары, начиная с головных уборов и
+                заканчивая автомобилем. Нас меняет время. Мы становимся другими с возрастом, и мы становимся другими потому,
+                что жизнь вокруг тоже меняется, а мы вынуждены под неё подстраиваться… Ещё нас меняет окружение. Семья,
+                коллектив на работе, друзья, общество, в котором мы вращаемся, город и страна, в которых мы живём.
+                Меняют нас обстоятельства, в которые мы попадаем. Очень сильно меняет нас любовь. И ненависть тоже меняет.
+                И счастье, и страх, и стрессовые ситуации. Нас меняет успех и разочарование, меняет благополучие и
+                пережитые трагедии, меняют новые знания, книги, фильмы… Всё это так и в то же время, всё это совсем не верно.
+                Потому что на самом деле существует лишь одна причина для перемен — мы сами.
+                По-настоящему мы можем измениться только тогда, когда сами этого захотим.
+            </p></div>
+        </div>
+    </div>
+
+    <div name="liable" style="margin-top:150px;">
+        ЛУЧШИЕ ПРЕДЛОЖЕНИЯ НА
+        <span style="color: #DF3062;"> {{dataDay}} </span>
+        <span style="color: #4BAC3F;"> {{dataMonth}} </span>
+        <span style="color: #11ABC1;"> {{dataYear}} Г. </span>
+    </div>
+
+    <div class="parent">
+        <ul class="horizontal-list">
+            {% for i in iterations %}
+                <li style="margin-left: 10px;">
+                    <div style="background:balck;">
+                        <img src="{% static 'perfomanse/images/empty.png/'%}" style="margin-right:10px;"/>
+
+                        <div style="word-break:break-all; width: 90%;">
+                            <p name="styleFont">[Название товара]</p>
+                        </div>
+
+                        <div style="word-break:break-all; width: 90%;">
+                            <p name="styleFontPrice">[Цена товара]<span style="font-size: 20px; font-family: 'Hero';"> ₽ </span></p>
+                        </div>
+                    </div>
+                </li>
+            {%endfor%}
+        </ul>
+    </div>
+
+    <div class="parent">
+        <div name="liable">
+            БРЕНДЫ
+        </div>
+
+        <ul class="horizontal-list2">
+            {% for i in iterationsBrands%}
+                <li>
+                    <div style="background:balck;">
+                        <img src="{% static 'perfomanse/images/empty.png/' %}"/>
+                    </div>
+                </li>
+            {%endfor%}
+        </ul>
+    </div>
+
+    <footer name="footer">
+        Подвал
+    </footer>
+</body>
+</html>

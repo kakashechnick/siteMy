@@ -1,0 +1,244 @@
+p[name=LogoName] {
+    font-family: 'Hero';
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    text-decoration: underline wavy red 8px;
+    decoration-line: underline;
+    text-underline-offset: 15px;
+    text-decoration-style: wavy;
+    text-decoration-color: red;
+    text-decoration-skip-ink: none;
+}
+
+p[name=LogoNameUnder] {
+    font-family: 'Hero';
+    font-size: 40px;
+    letter-spacing: 13px;
+    line-height: 0em;
+}
+
+p[name=LogoNameAbove] {
+    font-family: 'Arial';
+    font-size: 30px;
+    font-weight: bold;
+    letter-spacing: 6px;
+    line-height: 2em;
+}
+
+div[name=ContainLogoName]{
+    line-height: 0;
+    width: 500px;
+    margin:0 auto;
+}
+
+#container img{
+    width: 350px;
+	height: 120px;
+}
+
+#container div[name=images]{
+    font-family: 'Arial';
+    font-size: 15px;
+    display: inline-block;
+    margin-left: 150px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+#container div[name=images2]{
+    font-family: 'Arial';
+    font-size: 15px;
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 130px;
+    letter-spacing: 3px;
+    font-weight: bold;
+}
+
+div [name=Authorisation]{
+    font-family: 'Arial';
+    font-size: 15px;
+    vertical-align: top;
+    float: right;
+    display: inline-block;
+    letter-spacing: 3px;
+    margin-right: 50px;
+}
+
+#container2 img{
+     width: 160px;
+     height: 185px;
+}
+
+#container2 div[name=history]{
+    font-family: 'Century gothic';
+    display: inline-block;
+    vertical-align: top;
+    width: 350px;
+    height: 100px;
+    text-align: justify;
+    margin-left: -30px;
+    margin-top: 30px;
+    background: rgba(245, 185, 53, .7);
+}
+
+#container2 div[name=history] p{
+    margin-top: 5px;
+    margin-left:30px;
+}
+
+#container2 span[name=historyBold]{
+    font-weight: bold;
+}
+
+#container2 span[name=marginHistory]{
+    font-weight: bold;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#container2 div[name=underLine]{
+    margin-top: 15px;
+    border-bottom: 1px solid #686464;
+    width: 1300px;
+    float: right;
+}
+
+#container2 p[name=quotation]{
+    margin-right: 100px;
+    font-family: 'Century gothic';
+    text-align: justify;
+    font-size: 19px;
+    width: 1200px;
+    float: right;
+}
+
+div[name=description]{
+    width: 1050px;
+    height: 170px;
+    margin-left: auto;
+    margin-right: 0;
+    text-align: justify;
+    background: rgba(75, 159, 225, .7);
+    margin-top:-60px;
+    margin-right:40px;
+}
+p[name=quotation]{
+    margin-left: -40px;
+}
+
+footer[name=footer]{
+    margin-top: 100px;
+    margin-left:20px;
+    margin-right:20px;
+    height: 170px;
+    background: #252669;
+}
+
+ul.horizontal-list {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+}
+
+ul.horizontal-list li{
+    margin: auto;
+
+    img {
+        width: 350px;
+        height: 350px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border: none;
+    }
+}
+.parent {
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+}
+
+p[name=styleFont]{
+    margin-left:10px;
+    font-family: 'Hero';
+    font-size: 13px;
+    font-weight: 900;
+}
+
+p[name=styleFontPrice]{
+    font-family: 'Century gothic';
+    font-weight: 900;
+    margin-left:10px;
+    margin-top: 40px;
+}
+
+div[name=liable]{
+    margin-top: 50px;
+    font-family: 'Century gothic';
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+   text-decoration: underline dotted;
+    text-underline-offset: 10px;
+}
+
+ul.horizontal-list2 {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+}
+ul.horizontal-list2 li{
+    margin: auto;
+
+    img {
+        width: 250px;
+        height: 250px;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        border: none;
+    }
+}
+
+body {
+  padding: 2rem;
+  background: #eee;
+}
+
+
+.parent::-webkit-scrollbar{
+    height: 15px;
+}
+
+.parent::-webkit-scrollbar-track{
+    background-color: rgb(247, 247, 247);
+    border-radius: 12px;
+}
+
+.parent::-webkit-scrollbar-thumb{
+    background-color: rgb(245, 185, 53);
+    border-radius: 12px;
+    border: 4px solid #11ABC1
+}
+
+
+body::-webkit-scrollbar {
+    width: 15px; /* Ширина всего элемента навигации */
+}
+
+body::-webkit-scrollbar-track {
+    background: #F7F7F7; /* Цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #11ABC1; /* Цвет бегунка */
+    border-radius: 20px; /* Округление бегунка */
+    border: 4px solid #F5B935; /* Оформление границ бегунка */
+}
+
+html, body{
+    margin: 0;
+    padding: 0
+}
