@@ -9,6 +9,7 @@ def mainPageView(request):
   data = {'Title': 'Главная страница',
           'iterations': range(10),
           'iterationsBrands': range(6),
+          'image_data': '',
           'dataDay': dataNow.day, 'dataMonth': dataReform.monthReform(dataNow.month), 'dataYear': dataNow.year
           }
 

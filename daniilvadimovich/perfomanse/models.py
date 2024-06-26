@@ -1,3 +1,6 @@
 from django.db import models
 
-# Create your models here.
+
+class Brand(models.Model):
+  title = models.CharField(max_length=200)
+  image = models.TextField(default='_')
