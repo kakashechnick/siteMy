@@ -1,50 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    {% load static %}
-    <meta charset="UTF-8">
-    <title>{{Title}}</title>
+{% extends 'base.html' %}
 
-    <link href="{% static 'perfomanse/css/main.css/' %}" rel="stylesheet"/>
-</head>
+{% block content %}
+    <div id="container">
+        <img src="{% static 'perfomanse/images/mainLogo.png/' %}"/>
 
-<body style="background: #F7F7F7">
-<div id="container">
-    <img src="{% static 'perfomanse/images/mainLogo.png/' %}"/>
+        <div name="images">
+            <p style="background: #DF3062; padding:5px;"><a href="" style="text-decoration: none;color: black; "> Идеи -></a></p>
+            <p><a href="" style="text-decoration: none;color: black;"> Новинки -></a></p>
+            <p style="background: #11ABC1; padding: 0px 30px 10px 20px; margin-left: -20px; margin-right: 20px;
+            text-align: center"><a href="" style="text-decoration: none; color: black;"> Брэнды -></a></p>
+            <p><a href="" style="text-decoration: none; color: black; background: #4BAC3F; padding: 10px;"> Аксессуары -></a></p>
+        </div>
 
-    <div name="images">
-        <p style="background: #DF3062; padding:5px;"><a href="" style="text-decoration: none;color: black; "> Идеи -></a></p>
-        <p><a href="" style="text-decoration: none;color: black;"> Новинки -></a></p>
-        <p style="background: #11ABC1; padding: 0px 30px 10px 20px; margin-left: -20px; margin-right: 20px;
-        text-align: center"><a href="" style="text-decoration: none; color: black;"> Брэнды -></a></p>
-        <p><a href="" style="text-decoration: none; color: black; background: #4BAC3F; padding: 10px;"> Аксессуары -></a></p>
+        <div name="images2">
+            <p><a href="" style="text-decoration: none;color: black;"> Обувь -></a></p>
+            <p><a href="" style="text-decoration: none;color: black; background: #F5B935; padding: 10px 10px 5px 30px; margin-left: -20px;" > Одежда -> </a></p>
+        </div>
+
+        <div name="Authorisation">
+            <p>
+                <span>
+                    <a href="" style="text-decoration: none;color: black;"> Вход </a>
+                </span>
+                <span style="margin-left: 20px; margin-right: 20px;"> / </span>
+                <span>
+                    <a href="" style="text-decoration: none;color: black;"> Регистрация  </a>
+                </span>
+            </p>
+        </div>
     </div>
-
-    <div name="images2">
-        <p><a href="" style="text-decoration: none;color: black;"> Обувь -></a></p>
-        <p><a href="" style="text-decoration: none;color: black; background: #F5B935; padding: 10px 10px 5px 30px; margin-left: -20px;" > Одежда -> </a></p>
+    <div style="background: #DF3062; margin: 0px 0px 0px 300px; margin-top: 80px; margin-bottom: 80px;">
+        <div name="ContainLogoName">
+            <p name="LogoNameAbove" style="color: #9a183d;"> Твой рабочий стиль </p>
+            <p name="LogoName">Professional</p>
+            <p name="LogoNameUnder" style="color: #FEFEFE;"> Urban</p>
+            <p name="LogoNameUnder" style="background:#F5B935;"> Wardrobe </p>
+        </div>
     </div>
-
-    <div name="Authorisation">
-        <p>
-            <span>
-                <a href="" style="text-decoration: none;color: black;"> Вход </a>
-            </span>
-            <span style="margin-left: 20px; margin-right: 20px;"> / </span>
-            <span>
-                <a href="" style="text-decoration: none;color: black;"> Регистрация  </a>
-            </span>
-        </p>
-    </div>
-</div>
-<div style="background: #DF3062; margin: 0px 0px 0px 300px; margin-top: 80px; margin-bottom: 80px;">
-    <div name="ContainLogoName">
-        <p name="LogoNameAbove" style="color: #9a183d;"> Твой рабочий стиль </p>
-        <p name="LogoName">Professional</p>
-        <p name="LogoNameUnder" style="color: #FEFEFE;"> Urban</p>
-        <p name="LogoNameUnder" style="background:#F5B935;"> Wardrobe </p>
-    </div>
-</div>
 
     <div id="container2">
         <img src="{% static 'perfomanse/images/chel.jpg/' %}"/>
@@ -110,18 +102,15 @@
         </div>
 
         <ul class="horizontal-list2">
-            {% for i in iterationsBrands%}
+            {% for i in image_data%}
                 <li>
-                    <div style="background:balck;">
-                        <img src="data:image/jpg;base64,{{ image_data }}"/>
+                    <div>
+                        <a href="{{ i.get_absolute_url }}">
+                            <img src="data:image/png;base64,{{ i.image }}"/>
+                        </a>
                     </div>
                 </li>
             {%endfor%}
         </ul>
     </div>
-
-    <footer name="footer">
-        Подвал
-    </footer>
-</body>
-</html>
+{% endblock %}

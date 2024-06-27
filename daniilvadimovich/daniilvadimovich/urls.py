@@ -17,9 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from perfomanse.views import mainPageView
+from perfomanse.views import mainPageView, thisBrand
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('daniilvadimovich/', mainPageView)
+    path('admin/', admin.site.urls, name='admin'),
+    path('daniilvadimovich/', mainPageView, name='main'),
+    path('daniilvadimovich/brand/<slug:brand_slug>/', thisBrand, name='brand')
 ]

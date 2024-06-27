@@ -1,0 +1,20 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{Title}}</title>
+
+    <link href="{% static 'perfomanse/css/main.css/' %}" rel="stylesheet"/>
+</head>
+    <body style="background: #F7F7F7">
+        {% block content %}
+
+        {% endblock %}
+
+        <footer name="footer">
+            Подвал
+        </footer>
+    </body>
+</html>
