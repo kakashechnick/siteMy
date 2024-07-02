@@ -242,3 +242,17 @@ html, body{
     margin: 0;
     padding: 0
 }
+
+ul.s3 {
+  display: flex;
+  flex-wrap: wrap;
+}
+ul.s3 li {
+  display: block;
+}
+
+.brandImageHeightWidth{
+    height: 200px;
+    width: 200px;
+}
+

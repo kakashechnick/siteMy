@@ -17,10 +17,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from perfomanse.views import mainPageView, thisBrand
+from perfomanse.views import (
+  mainPageView,
+  thisBrand,
+  allBrand,
+  goods,
+)
 
 urlpatterns = [
-    path('admin/', admin.site.urls, name='admin'),
-    path('daniilvadimovich/', mainPageView, name='main'),
-    path('daniilvadimovich/brand/<slug:brand_slug>/', thisBrand, name='brand')
+  path('admin/', admin.site.urls, name='admin'),
+  path('ebatKakStilno/', mainPageView, name='main'),
+  path('ebatKakStilno/brand/<slug:brand_slug>/', thisBrand, name='brand'),
+  path('ebatKakStilno/brand/<slug:goods_slug>/sku-<str:sku_counter>/', goods, name='thisGoods'),
+  path('ebatKakStilno/brand/', allBrand, name='brands')
 ]

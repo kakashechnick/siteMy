@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div>
+    <ul class="columnTable" style="list-style-type: none;">
+        {% for i in image_data%}
+            <li>
+                <a href="{{i.get_absolute_url}}">
+                    <div style=" width: 90%;">
+                        <img class="brandImageHeightWidth" src="data:image/png;base64,{{ i.image }}"/>
+                        <p name="styleFont2">{{i.title}}</p>
+                    </div>
+                </a>
+            </li>
+        {%endfor%}
+    </ul>
+</div>
+{% endblock %}
